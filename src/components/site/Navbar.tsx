@@ -32,7 +32,7 @@ export const Navbar = () => {
     >
       <div className="container-editorial flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-3">
-          <img src={logo} alt="APC logo" width={40} height={40} className="h-10 w-10 object-contain" />
+          <img src={logo} alt="APC logo" width={40} height={40} fetchPriority="high" decoding="async" className="h-10 w-10 object-contain" />
           <div className="leading-tight">
             <div className="h-display text-base sm:text-lg text-foreground">MUJE MAHA</div>
             <div className="text-[10px] uppercase tracking-[0.18em] text-muted-foreground">APC • Nasarawa State</div>

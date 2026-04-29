@@ -7,7 +7,7 @@ export const Founder = () => {
       <div className="container-editorial max-w-4xl text-center">
         <div className="eyebrow mb-6 justify-center">Our Founder</div>
         <div className="mx-auto h-32 w-32 sm:h-40 sm:w-40 overflow-hidden rounded-full ring-1 ring-border">
-          <img src={founder} alt="Founder of MUJE MAHA" loading="lazy" width={400} height={400} className="h-full w-full object-cover" />
+          <img src={founder} alt="Founder of MUJE MAHA" loading="lazy" decoding="async" width={400} height={400} sizes="(min-width: 640px) 160px, 128px" className="h-full w-full object-cover" />
         </div>
 
         <Quote className="mx-auto mt-10 h-7 w-7 text-gold" />

@@ -37,8 +37,10 @@ export const Gallery = () => {
                 src={g.src}
                 alt={g.label}
                 loading="lazy"
+                decoding="async"
                 width={1024}
                 height={768}
+                sizes="(min-width: 1024px) 33vw, 50vw"
                 className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <figcaption className="absolute inset-0 bg-foreground/0 group-hover:bg-foreground/40 transition-colors flex items-end p-5">
