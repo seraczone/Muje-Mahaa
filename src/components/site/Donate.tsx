@@ -48,7 +48,7 @@ export const Donate = () => {
               community impact across all 13 LGAs.
             </p>
 
-            <div id="join" className="mt-10 border border-border bg-card p-7">
+            <div className="mt-10 border border-border bg-card p-7">
               <div className="flex items-center gap-3 text-foreground">
                 <Building className="h-5 w-5 text-primary" />
                 <div className="h-section text-xl">Bank Details</div>
