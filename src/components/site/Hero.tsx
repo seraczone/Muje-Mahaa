@@ -62,6 +62,10 @@ export const Hero = () => {
               alt="APC supporters at a Nasarawa rally"
               width={1600}
               height={1000}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              sizes="(min-width: 1024px) 40vw, 100vw"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
