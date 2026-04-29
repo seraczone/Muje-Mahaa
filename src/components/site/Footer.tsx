@@ -8,7 +8,7 @@ export const Footer = () => {
         <div className="lg:col-span-5">
           <div className="flex items-center gap-3">
             <div className="bg-white rounded-sm p-1.5">
-              <img src={logo} alt="APC logo" width={36} height={36} className="h-9 w-9 object-contain" />
+              <img src={logo} alt="APC logo" width={36} height={36} loading="lazy" decoding="async" className="h-9 w-9 object-contain" />
             </div>
             <div>
               <div className="h-display text-lg">MUJE MAHA</div>
