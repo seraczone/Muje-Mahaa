@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { TrendingUp, Building2, Landmark, Users, Sprout, GraduationCap, ShieldCheck, HeartPulse } from "lucide-react";
+import { TrendingUp, Building2, Landmark, Users, Sprout, GraduationCap, ShieldCheck, HeartPulse, BadgeCheck } from "lucide-react";
 
 type TabKey = "president" | "governor";
 
@@ -129,13 +129,25 @@ export const Achievements = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.05 * i, duration: 0.4 }}
-                  className="group bg-card border border-border p-7 hover:border-foreground/30 hover:-translate-y-0.5 transition-all"
+                  className="group bg-card border border-border overflow-hidden hover:border-foreground/30 hover:-translate-y-0.5 transition-all"
                 >
-                  <div className={`inline-flex h-11 w-11 items-center justify-center rounded-sm bg-secondary ${d.accent}`}>
-                    <it.icon className="h-5 w-5" />
+                  <div
+                    className={`relative h-20 flex items-center justify-between px-6 border-b border-border bg-gradient-to-br ${
+                      tab === "president" ? "from-primary/10 via-secondary to-secondary" : "from-rally/10 via-secondary to-secondary"
+                    }`}
+                  >
+                    <div className={`inline-flex h-11 w-11 items-center justify-center rounded-sm bg-background ring-1 ring-border ${d.accent}`}>
+                      <it.icon className="h-5 w-5" />
+                    </div>
+                    <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-[0.18em] text-muted-foreground">
+                      <BadgeCheck className={`h-3.5 w-3.5 ${d.accent}`} />
+                      Verified
+                    </div>
                   </div>
-                  <h4 className="h-section text-xl mt-5 text-foreground">{it.title}</h4>
-                  <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
+                  <div className="p-7 pt-6">
+                    <h4 className="h-section text-xl text-foreground">{it.title}</h4>
+                    <p className="mt-3 text-sm text-muted-foreground leading-relaxed">{it.text}</p>
+                  </div>
                 </motion.div>
               ))}
             </div>
