@@ -6,6 +6,7 @@ import { Leadership } from "@/components/site/Leadership";
 import { Objectives } from "@/components/site/Objectives";
 import { Founder } from "@/components/site/Founder";
 import { Gallery } from "@/components/site/Gallery";
+import { Join } from "@/components/site/Join";
 import { Donate } from "@/components/site/Donate";
 import { Footer } from "@/components/site/Footer";
 
@@ -21,6 +22,7 @@ const Index = () => {
         <Objectives />
         <Founder />
         <Gallery />
+        <Join />
         <Donate />
       </main>
       <Footer />
