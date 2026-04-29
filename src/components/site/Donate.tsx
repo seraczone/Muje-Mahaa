@@ -10,17 +10,28 @@ export const Donate = () => {
   const [amount, setAmount] = useState<number | "">(10000);
   const [copied, setCopied] = useState(false);
 
+  const [status, setStatus] = useState("");
+
   const handleCopy = async () => {
     await navigator.clipboard.writeText("0123456789");
     setCopied(true);
-    toast.success("Account number copied");
+    toast.success("Account number copied", { description: "Paste it into your banking app to complete your gift." });
+    setStatus("Account number copied to clipboard.");
     setTimeout(() => setCopied(false), 1800);
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!amount) return toast.error("Please choose an amount");
-    toast.success(`Thank you! Continue your ₦${Number(amount).toLocaleString()} contribution at the bank.`);
+    if (!amount || Number(amount) < 500) {
+      toast.error("Please enter at least ₦500 to pledge");
+      setStatus("Donation pledge failed: amount must be at least ₦500.");
+      return;
+    }
+    const formatted = `₦${Number(amount).toLocaleString()}`;
+    toast.success(`Pledge received: ${formatted}`, {
+      description: "Complete your gift via bank transfer using the details on the left.",
+    });
+    setStatus(`Pledge of ${formatted} recorded. Please complete the bank transfer.`);
   };
 
   return (
