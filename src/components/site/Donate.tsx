@@ -139,6 +139,9 @@ export const Donate = () => {
             <p className="mt-4 text-xs text-muted-foreground text-center">
               Secure pledge — confirm via bank transfer using the details provided.
             </p>
+            <p role="status" aria-live="polite" className="sr-only">
+              {status}
+            </p>
           </form>
         </div>
       </div>
