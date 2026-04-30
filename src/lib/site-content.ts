@@ -28,7 +28,7 @@ import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
 import hero from "@/assets/hero.jpg";
 import founderPortrait from "@/assets/leader-founder.jpg";
-import governorPortrait from "@/assets/leader-governor.jpg";
+import governorPortrait from "@/assets/leader-governor-optimized.jpg";
 import presidentPortrait from "@/assets/leader-president-optimized.jpg";
 import seal from "@/assets/coat-of-arms.jpg";
 

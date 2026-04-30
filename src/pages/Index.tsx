@@ -18,8 +18,8 @@ const Index = () => {
       <HomeLeadershipSpotlights />
 
       <motion.section
-        initial={shouldReduceMotion ? undefined : { opacity: 0, y: 28 }}
-        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        initial={shouldReduceMotion ? undefined : { opacity: 0, x: -44 }}
+        whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.12 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="bg-background py-24 lg:py-32"
@@ -29,8 +29,8 @@ const Index = () => {
             {siteNavItems.map((item, index) => (
               <motion.div
                 key={item.to}
-                initial={shouldReduceMotion ? undefined : { opacity: 0, y: 18 }}
-                whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+                initial={shouldReduceMotion ? undefined : { opacity: 0, x: index % 2 === 0 ? -28 : 28, y: 10 }}
+                whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0, y: 0 }}
                 viewport={{ once: true, amount: 0.2 }}
                 transition={{ duration: 0.45, delay: shouldReduceMotion ? 0 : index * 0.06, ease: [0.16, 1, 0.3, 1] }}
               >
@@ -56,15 +56,15 @@ const Index = () => {
       </motion.section>
 
       <motion.section
-        initial={shouldReduceMotion ? undefined : { opacity: 0, y: 28 }}
-        whileInView={shouldReduceMotion ? undefined : { opacity: 1, y: 0 }}
+        initial={shouldReduceMotion ? undefined : { opacity: 0, x: 44 }}
+        whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
         viewport={{ once: true, amount: 0.18 }}
         transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
         className="border-y border-border bg-secondary/40 py-20 lg:py-24"
       >
         <div className="container-editorial grid items-center gap-10 lg:grid-cols-12">
           <motion.div
-            initial={shouldReduceMotion ? undefined : { opacity: 0, x: -24 }}
+            initial={shouldReduceMotion ? undefined : { opacity: 0, x: -40 }}
             whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
@@ -80,7 +80,7 @@ const Index = () => {
           </motion.div>
 
           <motion.div
-            initial={shouldReduceMotion ? undefined : { opacity: 0, x: 24 }}
+            initial={shouldReduceMotion ? undefined : { opacity: 0, x: 40 }}
             whileInView={shouldReduceMotion ? undefined : { opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1], delay: shouldReduceMotion ? 0 : 0.08 }}
