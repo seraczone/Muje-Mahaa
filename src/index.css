@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* MUJE MAHA Design System — APC inspired
+   All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 8%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 8%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 8%;
+
+    /* APC Green #00843D */
+    --primary: 147 100% 26%;
+    --primary-foreground: 0 0% 100%;
+    --primary-deep: 147 100% 18%;
+
+    /* Editorial neutral */
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 38%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 0 0% 8%;
+
+    /* Red #CC0000 */
+    --destructive: 0 100% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --rally: 0 100% 40%;
+
+    /* Gold #C9A84C */
+    --gold: 43 53% 54%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 147 100% 26%;
+
+    --radius: 0.25rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  ::selection {
+    background: hsl(var(--primary));
+    color: hsl(var(--primary-foreground));
+  }
+}
+
+@layer components {
+  .container-editorial {
+    @apply mx-auto w-full max-w-7xl px-6 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] font-semibold text-primary;
+  }
+  .eyebrow::before {
+    content: "";
+    @apply inline-block h-px w-8 bg-primary;
+  }
+
+  .h-display {
+    font-family: 'Cinzel', serif;
+    @apply font-semibold tracking-tight;
+  }
+  .h-section {
+    font-family: 'Playfair Display', serif;
+    @apply font-semibold tracking-tight;
+  }
+}
