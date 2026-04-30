@@ -132,6 +132,7 @@ export const HomeLeadershipSpotlights = () => {
                       src={resolveImageSource(spotlight.leader.imageKey, spotlight.leader.imageUrl)}
                       alt={spotlight.leader.name}
                       loading="lazy"
+                      fetchPriority="low"
                       decoding="async"
                       width={800}
                       height={1000}

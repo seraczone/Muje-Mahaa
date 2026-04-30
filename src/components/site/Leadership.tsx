@@ -33,6 +33,7 @@ const LeaderCard = ({ leader, featured = false }: { leader: LeaderItem; featured
           src={resolveImageSource(leader.imageKey, leader.imageUrl)}
           alt={title.primary}
           loading="lazy"
+          fetchPriority="low"
           decoding="async"
           width={800}
           height={1000}
@@ -44,6 +45,7 @@ const LeaderCard = ({ leader, featured = false }: { leader: LeaderItem; featured
           alt=""
           aria-hidden="true"
           loading="lazy"
+          fetchPriority="low"
           decoding="async"
           width={56}
           height={56}
