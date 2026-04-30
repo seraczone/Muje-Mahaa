@@ -3,17 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MUJE MAHA — APC Support Group, Nasarawa State</title>
-    <meta name="description" content="MUJE MAHA: An APC support group in Nasarawa State championing progress, leadership, and community impact across Nigeria." />
+    <title>MUJE MAHA - APC Support Group, Nasarawa State</title>
+    <meta
+      name="description"
+      content="Muje Maha Support Group is a grassroots APC platform supporting Governor Abdullahi A. Sule's senatorial ambition and the re-election of President Bola Ahmed Tinubu GCFR."
+    />
     <meta name="author" content="MUJE MAHA" />
 
-    <meta property="og:title" content="MUJE MAHA — APC Support Group, Nasarawa State" />
-    <meta property="og:description" content="Championing progress, leadership, and community impact across Nasarawa and Nigeria." />
+    <meta property="og:title" content="MUJE MAHA - APC Support Group, Nasarawa State" />
+    <meta
+      property="og:description"
+      content="A grassroots APC support platform for Governor Abdullahi A. Sule and President Bola Ahmed Tinubu GCFR's Renewed Hope Agenda."
+    />
     <meta property="og:type" content="website" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      (function (location) {
+        if (location.search[1] !== "/") {
+          return;
+        }
+
+        const decoded = location.search
+          .slice(1)
+          .split("&")
+          .map(function (segment) {
+            return segment.replace(/~and~/g, "&");
+          })
+          .join("?");
+
+        window.history.replaceState(null, "", location.pathname.slice(0, -1) + decoded + location.hash);
+      })(window.location);
+    </script>
   </head>
 
   <body>
